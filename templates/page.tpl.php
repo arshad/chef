@@ -100,7 +100,7 @@
       <?php print $footer_links; ?>
     <?php else: ?>
       <div class="span12">
-        <?php if ($footer_menu): ?>
+        <?php if (isset($footer_menu)): ?>
           <nav id="footer-menu" class="footer-menu">
             <?php print render($footer_menu); ?>
           </nav> <!-- /#footer-menu -->
