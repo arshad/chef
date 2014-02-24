@@ -21,9 +21,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
-            <span class="icon-search"></span>
-          </a>
+          <?php if ($search_form): ?>
+            <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
+              <span class="icon-search"></span>
+            </a>
+          <?php endif; ?>
 
           <?php if ($site_name): ?>
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
@@ -41,14 +43,15 @@
             </div>
           </div>
 
-          <div class="nav-collapse nav-search-collapse">
-            <div class="inner">
-              <?php if ($search_form): ?>
-                <?php print $search_form; ?>
-              <?php endif; ?>
+          <?php if ($search_form): ?>
+            <div class="nav-collapse nav-search-collapse">
+              <div class="inner">
+                <?php if ($search_form): ?>
+                  <?php print $search_form; ?>
+                <?php endif; ?>
+              </div>
             </div>
-          </div>
-
+          <?php endif; ?>
       </div>
     </div> <!-- /#navigation -->
   </div>
